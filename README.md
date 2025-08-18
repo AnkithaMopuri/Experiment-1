@@ -19,77 +19,111 @@ cases.
 ## Program
 ## 1.do while
 ```
-count = 0
-while True:
-    print(f"Current count: {count}")
-    count += 1
-    if count > 5:
-        break
+def do_while_example(start):
+    result = []
+    while True:
+        result.append(start)
+        start += 1
+        if start > 5:
+            break
+    return result
+def test_1():
+    assert do_while_example(2) == [2, 3, 4, 5]
+def test_2():
+    assert do_while_example(2) == [2, 3, 4]
+
 ```
 ## 2.while
 ```
-count = 1
-while count <= 5:
-  print(count)
-  count += 1
+def while_loop_example(start):
+    result = []
+    while start < 5:
+        result.append(start)
+        start += 1
+    return result
+
+def test_while_loop_1():
+    assert while_loop_example(2) == [2, 3, 4]
+
+def test_while_loop_2():
+    assert while_loop_example(2) == [2, 3]
+
+
 ```
 ## 3.for
 ```
-num = int(input("Enter a number: "))
+def for_loop_example(start):
+    result = []
+    for i in range(start, 5):
+        result.append(i)
+    return result
 
-for i in range(1, 11):
-    print(f"{num} x {i} = {num * i}")
+def test_for_loop_1():
+    assert for_loop_example(2) == [2, 3, 4]
 
-print()
+def test_for_loop_2():
+    assert for_loop_example(2) == [2, 3]
+
+
 ```
 ## 4.switch
 ```
+def switch_example(value):
+    match value:
+        case 1:
+            return "One"
+        case 2:
+            return "Two"
+        case _:
+            return "Other"
+
+def test_switch_1():
+    assert switch_example(1) == "One"
+    assert switch_example(2) == "Two"
+    assert switch_example(5) == "Other"
+
+def test_switch_2():
+    assert switch_example(1) == "Two"
 
 
-day = int(input("Enter day number (1-7): "))
 
-match day:
-    case 1:
-        print("Monday")
-    case 2:
-        print("Tuesday")
-    case 3:
-        print("Wednesday")
-    case 4:
-        print("Thursday")
-    case 5:
-        print("Friday")
-    case 6:
-        print("Saturday")
-    case 7:
-        print("Sunday")
-    case _:
-        print("Invalid day number")
-
-print()
 
 ```
 ## 5.if else
 ```
-num = int(input("Enter a number: "))
-if num % 2 == 0:
-    print(num, "is even")
-else:
-    print(num, "is odd")
+def if_else_example(num):
+    if num > 5:
+        return "Greater"
+    else:
+        return "Smaller or equal"
+
+def test_if_else_1():
+    assert if_else_example(7) == "Greater"
+    
+
+def test_if_else_2():
+    assert if_else_example(7) == "Smaller or equal"
+
+
 
 ```
 
 ## Output
+## do while:
+<img width="1266" height="416" alt="dowhileoutput" src="https://github.com/user-attachments/assets/29047b74-4c41-46b8-b8cc-f02cb11b3bd5" />
 
-<img width="626" height="160" alt="image" src="https://github.com/user-attachments/assets/91d5e676-b9eb-46f8-befc-7942d1f0d340" />
+## while:
+<img width="1279" height="448" alt="while" src="https://github.com/user-attachments/assets/e40d67ad-d118-4d27-b544-f436bc229ea1" />
 
-<img width="586" height="129" alt="image" src="https://github.com/user-attachments/assets/284f4976-0d2e-4210-b288-6e287a2e310c" />
+## for:
+<img width="1279" height="420" alt="for" src="https://github.com/user-attachments/assets/eba896f6-f80b-4bdc-8407-874addf09bda" />
 
-<img width="635" height="277" alt="image" src="https://github.com/user-attachments/assets/6136a859-fbd2-4b73-9344-ae9cc931fc78" />
+## switch:
+<img width="1279" height="420" alt="switch" src="https://github.com/user-attachments/assets/46d585ac-2228-4b49-893e-d3d37b4f0e6b" />
 
-<img width="631" height="76" alt="image" src="https://github.com/user-attachments/assets/51a7be3e-da95-4dcf-a617-dad8999d8969" />
+## if-else:
+<img width="1279" height="420" alt="ifelse" src="https://github.com/user-attachments/assets/bc1d297a-cc62-46d1-8a2e-1eb3c1fd81df" />
 
-<img width="599" height="69" alt="image" src="https://github.com/user-attachments/assets/4401eed0-a27f-4e7e-b12b-07f4d5af0efc" />
 
 
 ## Result
